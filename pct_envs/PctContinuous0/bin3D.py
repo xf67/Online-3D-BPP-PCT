@@ -1,7 +1,7 @@
 from .space import Space
 import numpy as np
 import gym
-from .binCreator import RandomBoxCreator, LoadBoxCreator, BoxCreator
+from .binCreator import BoxCreatorFromGenerator, RandomBoxCreator, LoadBoxCreator, BoxCreator
 import torch
 import random
 
@@ -38,7 +38,7 @@ class PackingContinuous(gym.Env):
         # Generator for train/test data
         if not load_test_data:
             assert item_set is not None
-            self.box_creator = RandomBoxCreator(item_set)
+            self.box_creator = BoxCreatorFromGenerator(10, 50, self.bin_size)
             assert isinstance(self.box_creator, BoxCreator)
 
         self.sample_from_distribution = sample_from_distribution
@@ -101,7 +101,7 @@ class PackingContinuous(gym.Env):
 
     # Generate the next item to be placed.
     def gen_next_box(self):
-        if self.sample_from_distribution and not self.test:
+        if self.sample_from_distribution and not self.test:  #不要用这个采样，即使是continuous，因为我重新写了一个box_creator，直接生成带小数的数据
             if self.setting == 2:
                 next_box = (round(np.random.uniform(self.sample_left_bound,self.sample_right_bound), 3),
                         round(np.random.uniform(self.sample_left_bound,self.sample_right_bound), 3),
@@ -173,7 +173,10 @@ class PackingContinuous(gym.Env):
         idx = [round(action[1], 6), round(action[2], 6)]
         bin_index = 0
         rotation_flag = action[0]
-        succeeded = self.space.drop_box(next_box, idx, rotation_flag, self.next_den, self.setting)
+        if self.space.box_idx >= len(self.space.upLetter) - 1:
+            succeeded = False
+        else:
+            succeeded = self.space.drop_box(next_box, idx, rotation_flag, self.next_den, self.setting)
 
         if not succeeded:
             reward = 0.0

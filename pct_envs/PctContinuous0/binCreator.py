@@ -1,6 +1,7 @@
 import numpy as np
 import copy
 import torch
+import random
 
 class BoxCreator(object):
     def __init__(self):
@@ -70,3 +71,92 @@ class LoadBoxCreator(BoxCreator):
             self.box_list.append((10, 10, 10))
             self.recorder.append((10, 10, 10))
             self.box_index += 1
+
+
+class BinPackingGenerator:
+    def __init__(self, container_size=(100, 100, 100)):
+        self.container_size = container_size
+        self.items = [container_size]
+        
+    def generate_items(self, min_items=10, max_items=50):
+        """Generate a list of items using the splitting algorithm"""
+        N = random.randint(min_items, max_items)
+        
+        while len(self.items) < N:
+            # Pop an item randomly by volume
+            volumes = [item[0] * item[1] * item[2] for item in self.items]
+            probabilities = np.array(volumes) / sum(volumes)
+            chosen_idx = np.random.choice(len(self.items), p=probabilities)
+            item = self.items.pop(chosen_idx)
+            
+            # Choose an axis randomly by edge length
+            edge_lengths = np.array(item)
+            axis_probs = edge_lengths / sum(edge_lengths)
+            split_axis = np.random.choice(3, p=axis_probs)
+            
+            # Choose split position (between 0.3 and 0.7 of the edge)
+            edge_length = item[split_axis]
+            min_ratio, max_ratio = 0.3, 0.7
+            split_pos = random.uniform(
+                edge_length * min_ratio, 
+                edge_length * max_ratio
+            )
+            
+            # Create two new items by splitting
+            new_items = []
+            for i in range(2):
+                new_item = list(item)
+                if i == 0:
+                    new_item[split_axis] = split_pos
+                else:
+                    new_item[split_axis] = edge_length - split_pos
+                
+                # Random rotation (0-5 possible rotations in 3D)
+                if random.random() < 0.5:  # 50% chance to rotate
+                    rotation_type = random.randint(0, 5)
+                    if rotation_type == 1:
+                        new_item[0], new_item[1] = new_item[1], new_item[0]
+                    elif rotation_type == 2:
+                        new_item[0], new_item[2] = new_item[2], new_item[0]
+                    elif rotation_type == 3:
+                        new_item[1], new_item[2] = new_item[2], new_item[1]
+                    elif rotation_type == 4:
+                        new_item = [new_item[2], new_item[0], new_item[1]]
+                    elif rotation_type == 5:
+                        new_item = [new_item[1], new_item[2], new_item[0]]
+                
+                # Round dimensions to 2 decimal places
+                new_item = tuple(round(x, 2) for x in new_item)
+                new_items.append(new_item)
+            
+            # Add new items to the list
+            self.items.extend(new_items)
+        
+        return self.items
+
+    def reset(self):
+        """Reset the generator to initial state"""
+        self.items = [self.container_size]
+
+class BoxCreatorFromGenerator(BoxCreator):
+    def __init__(self, min_items=10, max_items=50, container_size=(100, 100, 100)):
+        super().__init__()
+        self.generator = BinPackingGenerator(container_size)
+        self.min_items = min_items
+        self.max_items = max_items
+        
+    def reset(self):
+        """Reset both the box list and generator"""
+        super().reset()
+        self.generator.reset()
+        # Generate new set of items
+        self.box_set = self.generator.generate_items(self.min_items, self.max_items)
+        
+    def generate_box_size(self, **kwargs):
+        """Add a box from the generated set to the box list"""
+        if len(self.box_set) > 0:
+            self.box_list.append(self.box_set.pop())
+        else:
+            # If we run out of boxes, generate new ones
+            self.reset()
+            self.box_list.append(self.box_set.pop())
