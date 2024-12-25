@@ -1,3 +1,4 @@
+from typing import NamedTuple
 import torch
 from torch import nn
 import math

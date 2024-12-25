@@ -26,7 +26,8 @@ def main(args):
         torch.cuda.set_device(args.device)
 
     torch.set_num_threads(1)
-    torch.backends.cudnn.deterministic = True
+    # torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = True
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed_all(args.seed)
     np.random.seed(args.seed)
