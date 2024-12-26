@@ -209,3 +209,21 @@ class PackingContinuous(gym.Env):
         info['counter'] = len(self.space.boxes)
         return self.cur_observation(), reward, done, info
 
+
+import copy
+class PackingContinuousWithPreview(PackingContinuous):
+    def __init__(self, preview_size=5, **kwargs):
+        super().__init__(**kwargs)
+        self.preview_size = preview_size
+        
+    def get_preview_boxes(self,prev_siz=None):
+        # 获取未来preview_size个方块的信息
+        return self.box_creator.preview(prev_siz if prev_siz is not None else self.preview_size)
+        
+    def clone(self):
+        # 创建当前环境的深拷贝用于MCTS模拟
+        env_copy = copy.deepcopy(self)
+        return env_copy
+    
+    def rearrange(self, new_order):
+        self.box_creator.rearrange(new_order)

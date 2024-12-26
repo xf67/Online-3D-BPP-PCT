@@ -273,7 +273,7 @@ class Space(object):
         self.upLetter = np.zeros((holder, 5))
         self.box_vec = np.zeros((holder, 9))
         self.firstEMS = np.array([0, 0, 0, *self.plain_size])
-        self.EMS = np.zeros((1000, 6))
+        self.EMS = np.zeros((2000, 6))
         self.NOEMS  = 1
         self.reset()
 

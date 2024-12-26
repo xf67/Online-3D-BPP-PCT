@@ -60,7 +60,7 @@ def backup(timeStr, args, upper_policy = None):
     gymPath = './pct_envs'
     envName = args.id.split('-v')
     envName = envName[0] + envName[1]
-    envPath = os.path.join(gymPath, envName)
+    envPath = os.path.join(gymPath,'PctContinuous0') if args.evaluation_method == 'MCTS' else os.path.join(gymPath, envName)
     copytree(envPath, os.path.join(targetDir, envName))
 
     if upper_policy is not None:
@@ -158,6 +158,7 @@ def get_args():
     parser.add_argument('--print-log-interval',     type=int,   default=10, help='How often to print training logs')
 
     parser.add_argument('--evaluate', action='store_true', help='Evaluate only')
+    parser.add_argument('--evaluation-method', type=str, default='PCT', help='Evaluation method: PCT or MCTS')
     parser.add_argument('--evaluation-episodes', type=int, default=100, metavar='N', help='Number of episodes evaluated')
     parser.add_argument('--load-model', action='store_true', help='Load the trained model')
     parser.add_argument('--model-path', type=str, help='The path to load model')
@@ -167,6 +168,7 @@ def get_args():
     parser.add_argument('--sample-from-distribution', action='store_true', help='Sample continuous item size from a uniform distribution U(a,b), otherwise sample items from \'item_size_set\' in \'givenData.py\'')
     parser.add_argument('--sample-left-bound', type=float, metavar='a', help='The parametre a of distribution U(a,b)')
     parser.add_argument('--sample-right-bound', type=float, metavar='b', help='The parametre b of distribution U(a,b)')
+    parser.add_argument('--mcts', action='store_true', help='Use MCTS to simulate the packing process')
 
     args = parser.parse_args()
 
@@ -181,7 +183,10 @@ def get_args():
         args.sample_right_bound = 0.5 * min(args.container_size)
 
     if args.continuous:
-        args.id = 'PctContinuous-v0'
+        if args.mcts:
+            args.id = 'PctContinuousWithPreview-v0'
+        else:
+            args.id = 'PctContinuous-v0'
     else:
         args.id = 'PctDiscrete-v0'
 
@@ -238,3 +243,7 @@ def registration_envs():
         id='PctContinuous-v0',
         entry_point='pct_envs.PctContinuous0:PackingContinuous',
     )
+    register(
+        id='PctContinuousWithPreview-v0',
+        entry_point='pct_envs.PctContinuous0:PackingContinuousWithPreview',
+    )   

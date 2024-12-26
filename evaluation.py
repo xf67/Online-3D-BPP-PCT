@@ -4,7 +4,7 @@ if '/opt/ros/kinetic/lib/python2.7/dist-packages' in sys.path:
 import time
 from model import *
 from tools import *
-from evaluation_tools import evaluate
+from evaluation_tools import evaluate,evaluate_mcts
 import gym
 
 def main(args):
@@ -52,8 +52,12 @@ def main(args):
     backup(timeStr, args, None)
     
     # Perform all evaluation.
-    evaluate(PCT_policy, envs, timeStr, args, device,
-             eval_freq=args.evaluation_episodes, factor=args.normFactor)
+    if args.evaluation_method == 'PCT':
+        evaluate(PCT_policy, envs, timeStr, args, device,
+                 eval_freq=args.evaluation_episodes, factor=args.normFactor)
+    elif args.evaluation_method == 'MCTS':
+        evaluate_mcts(PCT_policy, envs, timeStr, args, device,
+                 eval_freq=args.evaluation_episodes, factor=args.normFactor)
 
 if __name__ == '__main__':
     registration_envs()

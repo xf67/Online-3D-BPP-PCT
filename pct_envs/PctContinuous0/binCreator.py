@@ -22,6 +22,14 @@ class BoxCreator(object):
         assert len(self.box_list) >= 0
         self.box_list.pop(0)
 
+    def rearrange(self, new_order):
+        #  new_order: 新的顺序，比如[2,0,1,4,3]表示当前位置后的5个方块的新顺序
+        n = len(new_order)
+        assert n <= len(self.box_list)
+        self.box_list[:n] = [
+            self.box_list[i] for i in new_order
+        ]
+
 class RandomBoxCreator(BoxCreator):
     default_box_set = []
     for i in range(5):
@@ -60,7 +68,7 @@ class LoadBoxCreator(BoxCreator):
         self.boxes = self.boxes.tolist()
         self.box_index = 0
         self.box_set = self.boxes
-        self.box_set.append([100, 100, 100])
+        self.box_set.append([100, 100, 100]) #表示结束，因为过大
 
     def generate_box_size(self, **kwargs):
         if self.box_index < len(self.box_set):
@@ -68,8 +76,8 @@ class LoadBoxCreator(BoxCreator):
             self.recorder.append(self.box_set[self.box_index])
             self.box_index += 1
         else:
-            self.box_list.append((10, 10, 10))
-            self.recorder.append((10, 10, 10))
+            self.box_list.append((100, 100, 100)) #如果拿不到了，就给过大的，让其放不了
+            self.recorder.append((100, 100, 100))
             self.box_index += 1
 
 
