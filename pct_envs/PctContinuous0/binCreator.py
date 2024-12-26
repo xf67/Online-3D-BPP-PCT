@@ -2,6 +2,8 @@ import numpy as np
 import copy
 import torch
 import random
+import pandas as pd
+
 
 class BoxCreator(object):
     def __init__(self):
@@ -168,3 +170,80 @@ class BoxCreatorFromGenerator(BoxCreator):
             # If we run out of boxes, generate new ones
             self.reset()
             self.box_list.append(self.box_set.pop())
+
+class CSVBoxCreator(BoxCreator):
+    def __init__(self, csv_file):
+        super().__init__()
+        self.csv_file = csv_file
+        print("load data from", csv_file)
+        self.index = 0
+        self.box_index = 0
+        self.box_trajs, self.order_info = self.load_boxes_from_csv()
+        self.traj_nums = len(self.box_trajs)
+
+    def load_boxes_from_csv(self):
+        df = pd.read_csv(self.csv_file)
+        # 按sta_code分组,每组是一个订单
+        orders = []
+        order_info = []  # 存储每个订单的盒子信息
+        for _, group in df.groupby('sta_code'):
+            boxes = []
+            boxes_info = []  # 存储当前订单中每个盒子的信息
+            # 提取每个盒子的长宽高信息
+            for _, row in group.iterrows():
+                # 获取长宽高并转换为float类型
+                length = float(row['长(CM)'])
+                width = float(row['宽(CM)']) 
+                height = float(row['高(CM)'])
+                # 保存盒子标识信息
+                box_info = {
+                    'sta_code': row['sta_code'],
+                    'sku_code': row['sku_code']
+                }
+                # 每个盒子按数量添加
+                qty = int(row['qty'])
+                for _ in range(qty):
+                    boxes.append((length, width, height))
+                    boxes_info.append(box_info)
+            orders.append(boxes)
+            order_info.append(boxes_info)
+        return orders, order_info
+    
+    def reset(self, index=None):
+        self.box_list.clear()
+        self.recorder = []
+        if index is None:
+            self.index += 1
+        else:
+            self.index = index
+        self.boxes = np.array(self.box_trajs[self.index])
+        self.boxes = self.boxes.tolist()
+        self.box_index = 0
+        self.box_set = self.boxes
+        self.box_set.append([100, 100, 100]) #表示结束，因为过大
+
+    def generate_box_size(self, **kwargs):
+        if self.box_index < len(self.box_set):
+            self.box_list.append(self.box_set[self.box_index])
+            self.recorder.append(self.box_set[self.box_index])
+            self.box_index += 1
+        else:
+            self.box_list.append((100, 100, 100)) #如果拿不到了，就给过大的，让其放不了
+            self.recorder.append((100, 100, 100))
+            self.box_index += 1
+
+if __name__ == "__main__":
+    csv_file = "/home/xiaxinfeng/HW/ML/Online-3D-BPP-PCT/dataset/task3.csv"
+    csv_box_creator = CSVBoxCreator(csv_file)
+    csv_box_creator.reset()
+    print("订单数量:", len(csv_box_creator.box_trajs))
+    print("第一个箱子的编号:", csv_box_creator.order_info[0][0])
+    print("第一个箱子的形状:", csv_box_creator.box_trajs[0][0])
+    
+    data_name = "/home/xiaxinfeng/HW/ML/Online-3D-BPP-PCT/dataset/setting123_discrete.pt"
+    load_box_creator = LoadBoxCreator(data_name)
+    load_box_creator.reset()
+    print("轨迹数量:", len(load_box_creator.box_trajs))
+    print("第一条轨迹的箱子数量:", len(load_box_creator.box_trajs[0]))
+    print("第一个箱子的形状:", load_box_creator.box_trajs[0][0])
+
