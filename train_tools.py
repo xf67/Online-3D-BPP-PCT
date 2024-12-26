@@ -162,3 +162,6 @@ class train_tools(object):
                 self.writer.add_scalar("Training/Value loss", critic_loss.item(), self.step_counter)
                 self.writer.add_scalar("Training/Action loss", actor_loss.item(), self.step_counter)
                 self.writer.add_scalar('Training/Distribution entropy', dist_entropy.item(), self.step_counter)
+
+            if self.step_counter >= args.total_updates:
+                break

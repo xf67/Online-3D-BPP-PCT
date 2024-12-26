@@ -135,6 +135,8 @@ def get_args():
     parser.add_argument('--leaf-node-holder', type=int, default=50, help='Maximum number of leaf nodes')
     parser.add_argument('--shuffle',type=bool, default=True, help='Randomly shuffle the leaf nodes')
     parser.add_argument('--continuous', action='store_true', help='Use continuous enviroment, otherwise the enviroment is discrete')
+    parser.add_argument('--container-size', type=str, default="[10,10,10]", help='Container size')
+    parser.add_argument('--total-updates', type=int, default=7000, help='Total updates for training')
 
     parser.add_argument('--no-cuda',action='store_true', help='Forbidden cuda')
     parser.add_argument('--device', type=int, default=0, help='Which GPU will be called')
@@ -155,7 +157,7 @@ def get_args():
     parser.add_argument('--model-save-interval',    type=int,   default=200   , help='How often to save the model')
     parser.add_argument('--model-update-interval',  type=int,   default=20e3 , help='How often to create a new model')
     parser.add_argument('--model-save-path',type=str, default='./logs/experiment', help='The path to save the trained model')
-    parser.add_argument('--print-log-interval',     type=int,   default=10, help='How often to print training logs')
+    parser.add_argument('--print-log-interval',     type=int,   default=50, help='How often to print training logs')
 
     parser.add_argument('--evaluate', action='store_true', help='Evaluate only')
     parser.add_argument('--evaluation-method', type=str, default='PCT', help='Evaluation method: PCT or MCTS')
@@ -174,8 +176,8 @@ def get_args():
 
     if args.no_cuda: args.device = 'cpu'
 
-    args.container_size = givenData.container_size
-    args.item_size_set  = givenData.item_size_set
+    args.container_size = [int(x) for x in args.container_size[1:-1].split(',')]  # 将字符串"[12,34,56]"转换为list [12,34,56]
+    args.item_size_set  = givenData.item_size_set  #这个无用,对于我们写的DataCreator来说
 
     if args.sample_from_distribution and args.sample_left_bound is None:
         args.sample_left_bound = 0.1 * min(args.container_size)
