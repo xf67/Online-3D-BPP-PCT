@@ -1,7 +1,7 @@
 from .space import Space
 import numpy as np
 import gym
-from .binCreator import BoxCreatorFromGenerator, RandomBoxCreator, LoadBoxCreator, BoxCreator
+from .binCreator import BoxCreatorFromGenerator, RandomBoxCreator, LoadBoxCreator, BoxCreator, CSVBoxCreator
 import torch
 import random
 
@@ -43,7 +43,16 @@ class PackingContinuous(gym.Env):
 
         self.sample_from_distribution = sample_from_distribution
         if load_test_data:
-            self.box_creator = LoadBoxCreator(data_name)
+            if data_name:
+                if data_name.endswith('.pt'):
+                    self.box_creator = LoadBoxCreator(data_name)
+                elif data_name.endswith('.csv'):
+                    self.box_creator = CSVBoxCreator(data_name)
+                else:
+                    raise ValueError("Invalid file extension for test data. Please use .pt or .csv.")
+            else:
+                print("No data name provided, using random box creator")
+                self.box_creator = RandomBoxCreator(10, 50, self.bin_size)
 
         self.test = load_test_data
         self.observation_space = gym.spaces.Box(low=0.0, high=self.space.height,
@@ -179,10 +188,14 @@ class PackingContinuous(gym.Env):
             succeeded = self.space.drop_box(next_box, idx, rotation_flag, self.next_den, self.setting)
 
         if not succeeded:
+            if next_box == (100, 100, 100):
+                good = True
+            else:
+                good = False
             reward = 0.0
             done = True
             info = {'counter': len(self.space.boxes), 'ratio': self.space.get_ratio(),
-                    'reward': self.space.get_ratio() * 10}
+                    'reward': self.space.get_ratio() * 10, 'finish': good}
             return self.cur_observation(), reward, done, info
 
         ################################################
