@@ -14,28 +14,65 @@ I use the code from [Online-3D-BPP-PCT](https://github.com/alexfrom0815/Online-3
 
 ### How to run
 
-Training for one container:
+#### Training for one container:
 
 ```bash
-python main.py --continuous --setting 2 --container-size "[100,100,100]" 
+python main.py --continuous --setting 2 --container-size "[100,100,100]"  --total-updates 7000
 ```
 
-Training for multiple containers:
+Be careful that the container size should be input as a string, not a list.
+
+The training code will exit when reach the maximum number of updates. 
+My method to exit the training is to break the loop in the `train_n_steps` function.
+And that will cause a problem that different processes will stop at different times, 
+and you will see a EOF error in that case. 
+But it will not affect the training, and you can just ignore it.
+
+#### Training for multiple containers:
 
 ```bash
 bash train_all.sh
 ```
 
-Test with single container:
+You can modify the `train_all.sh` to fit your needs.
+
+#### Generate evaluation data:
 
 ```bash
-python evaluate.py --continuous --setting 2 --container-size "[100,100,100]" --load-model --model-path path/to/your/model --load-dataset --dataset-path path/to/your/dataset
+python pct_envs/PctContinuous0/generate_eval_data.py
 ```
 
+The default setting is [100,100,100] container size. You can change it by modifying the script.
+
+#### Test with single container:
+
+```bash
+python evaluation.py --evaluate --continuous --setting 2 --container-size "[100,100,100]" --load-model --model-path path/to/your/model --load-dataset --dataset-path path/to/your/dataset --evaluation-episodes 10
+```
+
+You can provide dataset in the `.pt` format or `.csv` format. 
+I have revised the original code to support both formats.
+
+#### Test with MTCS:
+
+```bash
+python evaluation.py --evaluate --continuous --setting 2 --container-size "[100,100,100]" --load-model --model-path path/to/your/model --load-dataset --dataset-path path/to/your/dataset --mcts --evaluation-method MCTS --evaluation-episodes 10
+```
+
+My MCTS code is not very efficient, for it can only run with 1 CPU core, no parallelization.
+So it is quite slow.
+The default setting is that the model can preview 3 boxes and do 10 simulations, you can change it by `--num-simulations` and `--prev-size`.
+
+#### Test with multiple containers:
+
+```bash
+bash multi_box_eval.py
+```
+You may need to modify the `container_sizes` and `model_paths` in the script to fit your needs.
 
 ### Sample outputs
 
-Training output:
+#### Training output:
 
 ```
 Time version: t100100100-2024.12.27-22-53-37 is training
@@ -100,8 +137,121 @@ The mean space ratio is 0.43292918640132133, the ratio threshold is0.64400350003
 
 ```
 
-Evaluation output:
+This is the first 100 updates of training.
+
+#### Evaluation output:
 
 ```
+Episode 0 ends.
+Mean ratio: 0.755, length: 25.0
+Episode ratio: 0.755, length: 25
+Episode 1 ends.
+Mean ratio: 0.839, length: 32.0
+Episode ratio: 0.923, length: 39
+Episode 2 ends.
+Mean ratio: 0.8489999999999999, length: 33.666666666666664
+Episode ratio: 0.869, length: 37
+Episode 3 ends.
+Mean ratio: 0.8232499999999999, length: 31.0
+Episode ratio: 0.746, length: 23
+Episode 4 ends.
+Mean ratio: 0.8367999999999999, length: 32.8
+Episode ratio: 0.891, length: 40
+Episode 5 ends.
+Mean ratio: 0.8423333333333333, length: 33.5
+Episode ratio: 0.87, length: 37
+Episode 6 ends.
+Mean ratio: 0.8389999999999999, length: 33.42857142857143
+Episode ratio: 0.819, length: 33
+Episode 7 ends.
+Mean ratio: 0.83725, length: 33.25
+Episode ratio: 0.825, length: 32
+Episode 8 ends.
+Mean ratio: 0.8448888888888889, length: 33.666666666666664
+Episode ratio: 0.906, length: 37
+Episode 9 ends.
+Mean ratio: 0.8465, length: 33.7
+Episode ratio: 0.861, length: 34
+...
+```
+
+This test is run with the pretrained model and given dataset by the original author.
+The model is `setting2_discrete.pt` and the dataset is `setting123_discrete.pt`.
+You can find these in the original repo.
+
+#### Evaluation with MCTS output:
 
 ```
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:38<00:00,  3.86s/it]
+MCTS finished:  [1, 2, 0] time:  40.0873544216156
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.78s/it]
+MCTS finished:  [0, 2, 1] time:  39.250012159347534
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.78s/it]
+MCTS finished:  [2, 1, 0] time:  39.26024270057678
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.79s/it]
+MCTS finished:  [2, 0, 1] time:  39.402368783950806
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.79s/it]
+MCTS finished:  [2, 0, 1] time:  39.39738893508911
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.78s/it]
+MCTS finished:  [2, 0, 1] time:  39.29627180099487
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.79s/it]
+MCTS finished:  [1, 2, 0] time:  39.40318465232849
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.79s/it]
+MCTS finished:  [0, 1, 2] time:  39.37830066680908
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.77s/it]
+MCTS finished:  [0, 1, 2] time:  39.2023241519928
+Episode 0 ends.
+Mean ratio: 0.83, length: 26.0
+Episode ratio: 0.83, length: 26
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.79s/it]
+MCTS finished:  [1, 0, 2] time:  39.337443351745605
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.75s/it]
+MCTS finished:  [0, 2, 1] time:  38.96331810951233
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.79s/it]
+MCTS finished:  [2, 1, 0] time:  39.3866331577301
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.79s/it]
+MCTS finished:  [2, 0, 1] time:  39.39234256744385
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.79s/it]
+MCTS finished:  [1, 0, 2] time:  39.330618381500244
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.79s/it]
+MCTS finished:  [2, 0, 1] time:  39.39584755897522
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.79s/it]
+MCTS finished:  [0, 1, 2] time:  39.38414907455444
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:38<00:00,  3.80s/it]
+MCTS finished:  [0, 1, 2] time:  39.48703336715698
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.78s/it]
+MCTS finished:  [2, 0, 1] time:  39.237510681152344
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:37<00:00,  3.79s/it]
+MCTS finished:  [1, 2, 0] time:  39.40110635757446
+running MCTS
+100%|██████████████████████████████████████████████████████████████████████████| 10/10 [00:36<00:00,  3.64s/it]
+MCTS finished:  [0, 1, 2] time:  37.87047719955444
+Episode 1 ends.
+Mean ratio: 0.8115, length: 29.0
+Episode ratio: 0.793, length: 32
+...
+```
+
+This test is run with the pretrained model and given dataset by the original author.
+Just as I showed above.
+
+Also, as you can see, the MCTS is very slow.
