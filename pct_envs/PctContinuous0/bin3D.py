@@ -176,26 +176,33 @@ class PackingContinuous(gym.Env):
         return action, next_box
 
     def step(self, action):
+        # print("action:",action)
         if len(action) != 3: action, next_box = self.LeafNode2Action(action)
         else: next_box = self.next_box
-
+        # print("action:",action,"next_box:",next_box)
         idx = [round(action[1], 6), round(action[2], 6)]
         bin_index = 0
         rotation_flag = action[0]
         if self.space.box_idx >= len(self.space.upLetter) - 1:
             succeeded = False
         else:
+            # print("next_box:",next_box,"idx:",idx,"rotation_flag:",rotation_flag,"self.next_den:",self.next_den,"self.setting:",self.setting)
             succeeded = self.space.drop_box(next_box, idx, rotation_flag, self.next_den, self.setting)
-
         if not succeeded:
-            if next_box == (100, 100, 100):
+            if next_box == [100, 100, 100]:
                 good = True
             else:
                 good = False
             reward = 0.0
             done = True
+            # 获取当前订单信息
+            try:
+                order_info = self.box_creator.order_info[self.box_creator.index][0]
+            except:
+                order_info = "Failed to get order info"
             info = {'counter': len(self.space.boxes), 'ratio': self.space.get_ratio(),
-                    'reward': self.space.get_ratio() * 10, 'finish': good}
+                    'reward': self.space.get_ratio() * 10, 'finish': good,
+                    'order_info': order_info}
             return self.cur_observation(), reward, done, info
 
         ################################################
