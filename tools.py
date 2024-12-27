@@ -154,10 +154,10 @@ def get_args():
     parser.add_argument('--gat-layer-num',      type=int, default=1, help='The number GAT layers')
     parser.add_argument('--gamma', type=float, default=1.0, metavar='γ', help='Discount factor')
 
-    parser.add_argument('--model-save-interval',    type=int,   default=200   , help='How often to save the model')
+    parser.add_argument('--model-save-interval',    type=int,   default=100   , help='How often to save the model')
     parser.add_argument('--model-update-interval',  type=int,   default=20e3 , help='How often to create a new model')
     parser.add_argument('--model-save-path',type=str, default='./logs/experiment', help='The path to save the trained model')
-    parser.add_argument('--print-log-interval',     type=int,   default=50, help='How often to print training logs')
+    parser.add_argument('--print-log-interval',     type=int,   default=10, help='How often to print training logs')
 
     parser.add_argument('--evaluate', action='store_true', help='Evaluate only')
     parser.add_argument('--evaluation-method', type=str, default='PCT', help='Evaluation method: PCT or MCTS')
