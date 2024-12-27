@@ -162,14 +162,16 @@ def evaluate_mcts(PCT_policy:DRL_GAT, eval_envs:PackingContinuousWithPreview, ti
     episode_ratio = []
     episode_length = []
     all_episodes = []
-
     while step_counter < eval_freq:
         preview_boxes = eval_envs.get_preview_boxes(prev_size) #返回的是盒子的xyz，返回preview_size个（超出则用[100,100,100]填充）
         arrange_ori = [i for i in range(prev_size)]
         a=time.time()
-        print("running MCTS")
         mcts = MCTS(eval_envs.clone(), arrange_ori, PCT_policy, num_simulations, device, args, factor)
         best_sequence = mcts.search()
+        if len(best_sequence) < prev_size:
+            used_numbers = set(best_sequence)
+            remaining_numbers = [x for x in arrange_ori if x not in used_numbers]
+            best_sequence.extend(remaining_numbers)
         print("MCTS finished: ",best_sequence,"time: ", time.time()-a)
         # best_sequence = arrange_ori
         eval_envs.rearrange(best_sequence)

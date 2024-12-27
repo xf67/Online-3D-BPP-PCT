@@ -176,7 +176,7 @@ class CSVBoxCreator(BoxCreator):
         super().__init__()
         self.csv_file = csv_file
         print("load data from", csv_file)
-        self.index = 0
+        self.index = -1
         self.box_index = 0
         self.box_trajs, self.order_info = self.load_boxes_from_csv()
         self.traj_nums = len(self.box_trajs)
@@ -216,6 +216,8 @@ class CSVBoxCreator(BoxCreator):
             self.index += 1
         else:
             self.index = index
+        if self.index >= len(self.box_trajs):
+            self.index = 0
         self.boxes = np.array(self.box_trajs[self.index])
         self.boxes = self.boxes.tolist()
         self.box_index = 0
