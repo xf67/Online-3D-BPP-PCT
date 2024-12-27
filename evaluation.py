@@ -57,7 +57,8 @@ def main(args):
                  eval_freq=args.evaluation_episodes, factor=args.normFactor)
     elif args.evaluation_method == 'MCTS':
         evaluate_mcts(PCT_policy, envs, timeStr, args, device,
-                 eval_freq=args.evaluation_episodes, factor=args.normFactor)
+                 eval_freq=args.evaluation_episodes, factor=args.normFactor,
+                 num_simulations=args.num_simulations, prev_size=args.prev_size)
 
 if __name__ == '__main__':
     registration_envs()

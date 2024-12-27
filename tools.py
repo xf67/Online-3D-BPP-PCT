@@ -171,6 +171,8 @@ def get_args():
     parser.add_argument('--sample-left-bound', type=float, metavar='a', help='The parametre a of distribution U(a,b)')
     parser.add_argument('--sample-right-bound', type=float, metavar='b', help='The parametre b of distribution U(a,b)')
     parser.add_argument('--mcts', action='store_true', help='Use MCTS to simulate the packing process')
+    parser.add_argument('--num-simulations', type=int, default=10, help='The number of simulations for MCTS')
+    parser.add_argument('--prev-size', type=int, default=3, help='The number of boxes to preview for MCTS')
 
     args = parser.parse_args()
 
