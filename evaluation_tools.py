@@ -17,6 +17,7 @@ def evaluate(PCT_policy, eval_envs, timeStr, args, device, eval_freq = 100, fact
     step_counter = 0
     episode_ratio = []
     episode_length = []
+    episode_order_info = []
     all_episodes = []
 
     while step_counter < eval_freq:
@@ -27,7 +28,11 @@ def evaluate(PCT_policy, eval_envs, timeStr, args, device, eval_freq = 100, fact
         obs, reward, done, infos = eval_envs.step(selected_leaf_node.cpu().numpy()[0][0:6])
 
         if done:
-            print('Episode {} ends.'.format(step_counter))
+            if 'order_info' in infos.keys():
+                episode_order_info.append(infos['order_info']['sta_code'])
+                print('order', infos['order_info']['sta_code'], 'ends.')
+            else:
+                print('Episode {} ends.'.format(step_counter))
             if 'ratio' in infos.keys():
                 episode_ratio.append(infos['ratio'])
             if 'counter' in infos.keys():
@@ -162,6 +167,7 @@ def evaluate_mcts(PCT_policy:DRL_GAT, eval_envs:PackingContinuousWithPreview, ti
     episode_ratio = []
     episode_length = []
     all_episodes = []
+    episode_order_info = []
     while step_counter < eval_freq:
         preview_boxes = eval_envs.get_preview_boxes(prev_size) #返回的是盒子的xyz，返回preview_size个（超出则用[100,100,100]填充）
         arrange_ori = [i for i in range(prev_size)]
@@ -187,7 +193,11 @@ def evaluate_mcts(PCT_policy:DRL_GAT, eval_envs:PackingContinuousWithPreview, ti
                 obs, reward, done, infos = eval_envs.step(selected_leaf_node.cpu().numpy()[0][0:6])
                 
                 if done:
-                    print('Episode {} ends.'.format(step_counter))
+                    if 'order_info' in infos.keys():
+                        episode_order_info.append(infos['order_info']['sta_code'])
+                        print('order', infos['order_info']['sta_code'], 'ends.')
+                    else:
+                        print('Episode {} ends.'.format(step_counter))
                     if 'ratio' in infos.keys():
                         episode_ratio.append(infos['ratio'])
                     if 'counter' in infos.keys():

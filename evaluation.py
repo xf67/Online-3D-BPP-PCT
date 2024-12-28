@@ -6,6 +6,9 @@ from model import *
 from tools import *
 from evaluation_tools import evaluate,evaluate_mcts
 import gym
+import numpy as np
+import random
+import torch
 
 def main(args):
     # The name of this evaluation, related file backups and experiment tensorboard logs will
@@ -20,8 +23,11 @@ def main(args):
         torch.cuda.set_device(args.device)
 
     torch.set_num_threads(1)
+    torch.backends.cudnn.deterministic = True
     torch.manual_seed(args.seed)
     torch.cuda.manual_seed_all(args.seed)
+    np.random.seed(args.seed)
+    random.seed(args.seed)
 
     # Create single packing environment and load existing dataset.
     envs = gym.make(args.id,
