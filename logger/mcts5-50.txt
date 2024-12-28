@@ -1,0 +1,746 @@
+Please input the evaluate name
+load data from dataset/100100100.csv
+logs/experiment/t100100100-2024.12.27-22-53-37/PCT-t100100100-2024.12.27-22-53-37_2024.12.27-22-53-41.pt
+Loading pre-train upper model logs/experiment/t100100100-2024.12.27-22-53-37/PCT-t100100100-2024.12.27-22-53-37_2024.12.27-22-53-41.pt
+Pre-train model loaded! logs/experiment/t100100100-2024.12.27-22-53-37/PCT-t100100100-2024.12.27-22-53-37_2024.12.27-22-53-41.pt
+MCTS finished:  [1, 2, 0, 3, 4] time:  7.695235729217529
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.046389579772949
+MCTS finished:  [0, 1, 2, 4, 3] time:  6.138611078262329
+order ORDER_0000 ends.
+Mean ratio: 0.6672478615093993, length: 11.0
+Episode ratio: 0.6672478615093993, length: 11
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.980636119842529
+MCTS finished:  [4, 2, 0, 1, 3] time:  7.479273080825806
+MCTS finished:  [3, 2, 0, 1, 4] time:  7.6122519969940186
+MCTS finished:  [4, 2, 0, 1, 3] time:  7.858513116836548
+MCTS finished:  [3, 2, 0, 1, 4] time:  8.672022104263306
+MCTS finished:  [2, 1, 0, 4, 3] time:  8.648361682891846
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.969834804534912
+order ORDER_0001 ends.
+Mean ratio: 0.637503473474884, length: 21.5
+Episode ratio: 0.6077590854403687, length: 32
+MCTS finished:  [1, 0, 2, 3, 4] time:  6.967103481292725
+MCTS finished:  [2, 3, 1, 4, 0] time:  7.288890600204468
+MCTS finished:  [4, 2, 0, 3, 1] time:  6.5638487339019775
+order ORDER_0002 ends.
+Mean ratio: 0.5796604420614624, length: 17.666666666666668
+Episode ratio: 0.4639743792346191, length: 10
+MCTS finished:  [4, 1, 0, 3, 2] time:  6.827871322631836
+MCTS finished:  [4, 0, 1, 3, 2] time:  6.112783193588257
+order ORDER_0003 ends.
+Mean ratio: 0.5657302552957916, length: 15.25
+Episode ratio: 0.5239396949987792, length: 8
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.011920690536499
+MCTS finished:  [4, 0, 1, 3, 2] time:  7.33418083190918
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.947965145111084
+MCTS finished:  [0, 1, 2, 4, 3] time:  8.293493032455444
+MCTS finished:  [1, 4, 0, 2, 3] time:  7.907836198806763
+order ORDER_0004 ends.
+Mean ratio: 0.5487446016391295, length: 16.8
+Episode ratio: 0.48080198701248167, length: 23
+MCTS finished:  [0, 1, 2, 4, 3] time:  6.970860958099365
+MCTS finished:  [0, 2, 1, 3, 4] time:  7.2973473072052
+MCTS finished:  [0, 2, 1, 3, 4] time:  7.674727201461792
+MCTS finished:  [4, 1, 0, 2, 3] time:  7.896050930023193
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.640500545501709
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.625503063201904
+order ORDER_0005 ends.
+Mean ratio: 0.563910498299586, length: 18.333333333333332
+Episode ratio: 0.6397399816018677, length: 26
+MCTS finished:  [4, 2, 0, 3, 1] time:  6.848985195159912
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.124361038208008
+order ORDER_0006 ends.
+Mean ratio: 0.5565630919904654, length: 16.428571428571427
+Episode ratio: 0.5124786541357422, length: 5
+MCTS finished:  [2, 0, 1, 3, 4] time:  6.899912357330322
+MCTS finished:  [3, 4, 0, 1, 2] time:  7.339738845825195
+MCTS finished:  [4, 0, 1, 2, 3] time:  7.692459344863892
+MCTS finished:  [0, 3, 1, 2, 4] time:  8.01793909072876
+MCTS finished:  [2, 0, 1, 3, 4] time:  8.572762727737427
+order ORDER_0007 ends.
+Mean ratio: 0.5754750680632591, length: 17.375
+Episode ratio: 0.707858900572815, length: 24
+MCTS finished:  [0, 1, 3, 4, 2] time:  6.70550537109375
+MCTS finished:  [4, 2, 0, 1, 3] time:  5.74538254737854
+order ORDER_0008 ends.
+Mean ratio: 0.5762780338839213, length: 16.22222222222222
+Episode ratio: 0.5827017604492188, length: 7
+MCTS finished:  [1, 0, 2, 4, 3] time:  6.897613286972046
+MCTS finished:  [4, 3, 0, 1, 2] time:  7.306089878082275
+MCTS finished:  [4, 1, 0, 2, 3] time:  7.736700773239136
+MCTS finished:  [0, 4, 1, 2, 3] time:  7.268883466720581
+order ORDER_0009 ends.
+Mean ratio: 0.5790828591415863, length: 16.4
+Episode ratio: 0.6043262864605711, length: 18
+MCTS finished:  [4, 0, 1, 3, 2] time:  6.779426336288452
+MCTS finished:  [0, 4, 1, 2, 3] time:  7.187683582305908
+MCTS finished:  [0, 1, 2, 3, 4] time:  5.665968656539917
+order ORDER_0010 ends.
+Mean ratio: 0.5697994719269215, length: 15.818181818181818
+Episode ratio: 0.4769655997802735, length: 10
+MCTS finished:  [3, 0, 1, 2, 4] time:  6.928912162780762
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.387316703796387
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.056134223937988
+order ORDER_0011 ends.
+Mean ratio: 0.5564889979266484, length: 15.416666666666666
+Episode ratio: 0.410073783923645, length: 11
+MCTS finished:  [4, 2, 0, 1, 3] time:  6.992079496383667
+MCTS finished:  [3, 2, 0, 1, 4] time:  7.289288759231567
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.590137720108032
+MCTS finished:  [4, 2, 0, 1, 3] time:  7.986672401428223
+MCTS finished:  [2, 1, 0, 4, 3] time:  8.009185791015625
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.607314348220825
+order ORDER_0012 ends.
+Mean ratio: 0.5518025465276278, length: 16.307692307692307
+Episode ratio: 0.49556512973937994, length: 27
+MCTS finished:  [3, 1, 0, 2, 4] time:  6.918949365615845
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.257090091705322
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.845130681991577
+MCTS finished:  [4, 1, 0, 3, 2] time:  7.572496175765991
+order ORDER_0013 ends.
+Mean ratio: 0.554126111943185, length: 16.5
+Episode ratio: 0.5843324623454285, length: 19
+MCTS finished:  [1, 2, 3, 4, 0] time:  6.877337694168091
+order ORDER_0014 ends.
+Mean ratio: 0.5374388555284424, length: 15.666666666666666
+Episode ratio: 0.3038172657220459, length: 4
+MCTS finished:  [2, 3, 0, 4, 1] time:  6.861638307571411
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.347374200820923
+MCTS finished:  [2, 3, 0, 1, 4] time:  7.1565563678741455
+order ORDER_0015 ends.
+Mean ratio: 0.5310966430998612, length: 15.375
+Episode ratio: 0.4359634566711426, length: 11
+MCTS finished:  [1, 0, 2, 4, 3] time:  6.932134628295898
+MCTS finished:  [2, 0, 1, 4, 3] time:  7.322561025619507
+MCTS finished:  [3, 1, 0, 2, 4] time:  7.694255590438843
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.449969291687012
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.123639345169067
+order ORDER_0016 ends.
+Mean ratio: 0.5367336192926205, length: 15.823529411764707
+Episode ratio: 0.62692523837677, length: 23
+MCTS finished:  [3, 1, 0, 2, 4] time:  6.770935297012329
+MCTS finished:  [3, 0, 1, 2, 4] time:  6.773972749710083
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.3638081550598145
+order ORDER_0017 ends.
+Mean ratio: 0.5405703136749946, length: 15.722222222222221
+Episode ratio: 0.605794118175354, length: 14
+MCTS finished:  [4, 0, 1, 3, 2] time:  6.823904752731323
+MCTS finished:  [1, 0, 2, 4, 3] time:  7.272339820861816
+MCTS finished:  [1, 0, 2, 4, 3] time:  7.596570014953613
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.433001279830933
+order ORDER_0018 ends.
+Mean ratio: 0.5407254035619394, length: 15.842105263157896
+Episode ratio: 0.543517021526947, length: 18
+MCTS finished:  [1, 0, 2, 3, 4] time:  6.947782039642334
+MCTS finished:  [3, 2, 0, 1, 4] time:  7.295885801315308
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.682485818862915
+MCTS finished:  [2, 3, 0, 4, 1] time:  8.16730284690857
+MCTS finished:  [1, 2, 0, 4, 3] time:  8.655904054641724
+MCTS finished:  [4, 0, 1, 2, 3] time:  6.843518972396851
+order ORDER_0019 ends.
+Mean ratio: 0.5446047124090042, length: 16.3
+Episode ratio: 0.618311580503235, length: 25
+MCTS finished:  [1, 2, 0, 4, 3] time:  6.9572272300720215
+MCTS finished:  [3, 1, 4, 0, 2] time:  6.792085647583008
+MCTS finished:  [1, 2, 0, 4, 3] time:  7.430109024047852
+MCTS finished:  [2, 1, 0, 3, 4] time:  7.909226179122925
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.821897745132446
+MCTS finished:  [2, 1, 0, 3, 4] time:  8.603034973144531
+MCTS finished:  [0, 1, 2, 4, 3] time:  6.691291570663452
+order ORDER_0020 ends.
+Mean ratio: 0.5516960560664659, length: 17.0
+Episode ratio: 0.6935229292156982, length: 31
+MCTS finished:  [4, 0, 1, 3, 2] time:  6.943877458572388
+MCTS finished:  [2, 3, 0, 1, 4] time:  7.341142892837524
+MCTS finished:  [2, 4, 0, 1, 3] time:  7.968195676803589
+MCTS finished:  [2, 0, 1, 4, 3] time:  8.418276309967041
+MCTS finished:  [4, 0, 1, 2, 3] time:  8.602145195007324
+MCTS finished:  [0, 1, 2, 4, 3] time:  8.585542917251587
+MCTS finished:  [0, 2, 1, 4, 3] time:  7.305389165878296
+order ORDER_0021 ends.
+Mean ratio: 0.5563444731516057, length: 17.681818181818183
+Episode ratio: 0.6539612319395446, length: 32
+MCTS finished:  [2, 4, 0, 1, 3] time:  6.911279201507568
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.17446756362915
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.832038164138794
+MCTS finished:  [3, 0, 1, 4, 2] time:  8.168551683425903
+MCTS finished:  [3, 1, 0, 2, 4] time:  8.291755437850952
+MCTS finished:  [4, 2, 0, 1, 3] time:  8.748610734939575
+MCTS finished:  [0, 3, 1, 2, 4] time:  6.564495801925659
+order ORDER_0022 ends.
+Mean ratio: 0.5624072983235765, length: 18.217391304347824
+Episode ratio: 0.6957894521069335, length: 30
+MCTS finished:  [1, 0, 2, 3, 4] time:  6.945927381515503
+MCTS finished:  [3, 4, 0, 2, 1] time:  7.195979356765747
+MCTS finished:  [0, 3, 1, 2, 4] time:  7.300858736038208
+MCTS finished:  [0, 3, 1, 2, 4] time:  7.885380506515503
+MCTS finished:  [3, 0, 1, 2, 4] time:  8.267932891845703
+MCTS finished:  [0, 1, 2, 4, 3] time:  6.294593334197998
+order ORDER_0023 ends.
+Mean ratio: 0.5664308155211132, length: 18.5
+Episode ratio: 0.658971711064453, length: 25
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.911250829696655
+MCTS finished:  [2, 0, 1, 4, 3] time:  7.242686986923218
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.609280109405518
+order ORDER_0024 ends.
+Mean ratio: 0.5579251770977174, length: 18.24
+Episode ratio: 0.35378985493621823, length: 12
+MCTS finished:  [3, 4, 0, 2, 1] time:  6.842096328735352
+MCTS finished:  [0, 2, 1, 3, 4] time:  7.275691032409668
+MCTS finished:  [0, 4, 1, 3, 2] time:  7.753566026687622
+MCTS finished:  [1, 3, 0, 2, 4] time:  6.998318433761597
+order ORDER_0025 ends.
+Mean ratio: 0.5607639402018386, length: 18.26923076923077
+Episode ratio: 0.6317330178048706, length: 19
+MCTS finished:  [0, 3, 1, 4, 2] time:  6.682328701019287
+MCTS finished:  [0, 4, 1, 2, 3] time:  6.852325439453125
+MCTS finished:  [0, 1, 2, 4, 3] time:  6.482280254364014
+order ORDER_0026 ends.
+Mean ratio: 0.565422752405486, length: 18.0
+Episode ratio: 0.6865518697003173, length: 11
+MCTS finished:  [2, 0, 1, 4, 3] time:  6.8944220542907715
+MCTS finished:  [1, 4, 0, 2, 3] time:  7.323716402053833
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.893906116485596
+MCTS finished:  [1, 3, 0, 2, 4] time:  8.308873176574707
+MCTS finished:  [0, 2, 1, 3, 4] time:  9.131373167037964
+MCTS finished:  [1, 0, 2, 4, 3] time:  9.584217548370361
+order ORDER_0027 ends.
+Mean ratio: 0.5658861061762129, length: 18.392857142857142
+Episode ratio: 0.57839665798584, length: 29
+MCTS finished:  [1, 4, 0, 3, 2] time:  6.83981728553772
+MCTS finished:  [3, 0, 1, 4, 2] time:  7.40149998664856
+MCTS finished:  [0, 3, 1, 2, 4] time:  7.507644176483154
+order ORDER_0028 ends.
+Mean ratio: 0.5650407683698773, length: 18.20689655172414
+Episode ratio: 0.5413713097924804, length: 13
+MCTS finished:  [0, 3, 1, 4, 2] time:  6.568562984466553
+MCTS finished:  [3, 0, 1, 4, 2] time:  6.306226968765259
+order ORDER_0029 ends.
+Mean ratio: 0.5610344355296427, length: 17.766666666666666
+Episode ratio: 0.4448507831628418, length: 5
+MCTS finished:  [3, 0, 1, 2, 4] time:  6.932203769683838
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.404235601425171
+MCTS finished:  [3, 4, 0, 2, 1] time:  7.786545753479004
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.08261752128601
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.474646806716919
+order ORDER_0030 ends.
+Mean ratio: 0.5628522278169545, length: 17.93548387096774
+Episode ratio: 0.6173859964363098, length: 23
+MCTS finished:  [0, 2, 1, 3, 4] time:  6.927043199539185
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.516294717788696
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.765750408172607
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.042639017105103
+MCTS finished:  [4, 1, 0, 2, 3] time:  8.604733228683472
+MCTS finished:  [0, 2, 1, 3, 4] time:  8.119346857070923
+order ORDER_0031 ends.
+Mean ratio: 0.5648047996885752, length: 18.28125
+Episode ratio: 0.6253345277088166, length: 29
+MCTS finished:  [3, 1, 0, 4, 2] time:  6.97471809387207
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.123977899551392
+MCTS finished:  [2, 1, 0, 4, 3] time:  7.290264368057251
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.758657932281494
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.389510154724121
+MCTS finished:  [1, 0, 2, 4, 3] time:  8.428741216659546
+MCTS finished:  [2, 0, 1, 3, 4] time:  6.521500825881958
+order ORDER_0032 ends.
+Mean ratio: 0.5664692854078442, length: 18.636363636363637
+Episode ratio: 0.6197328284244538, length: 30
+MCTS finished:  [1, 4, 0, 3, 2] time:  6.937192440032959
+MCTS finished:  [1, 4, 3, 2, 0] time:  7.086778879165649
+MCTS finished:  [3, 2, 0, 1, 4] time:  7.021414041519165
+MCTS finished:  [4, 0, 1, 3, 2] time:  6.0615949630737305
+order ORDER_0033 ends.
+Mean ratio: 0.5668745929499412, length: 18.529411764705884
+Episode ratio: 0.5802497418391418, length: 15
+MCTS finished:  [4, 0, 1, 2, 3] time:  6.811583042144775
+MCTS finished:  [1, 2, 0, 4, 3] time:  6.958251953125
+order ORDER_0034 ends.
+Mean ratio: 0.5593950920967015, length: 18.2
+Episode ratio: 0.30509206308654785, length: 7
+MCTS finished:  [2, 0, 1, 3, 4] time:  6.932342052459717
+MCTS finished:  [0, 2, 1, 4, 3] time:  7.446606636047363
+MCTS finished:  [4, 1, 0, 2, 3] time:  7.4899091720581055
+MCTS finished:  [4, 0, 1, 2, 3] time:  7.99118709564209
+MCTS finished:  [3, 0, 1, 2, 4] time:  8.0419762134552
+order ORDER_0035 ends.
+Mean ratio: 0.5602302897649426, length: 18.36111111111111
+Episode ratio: 0.5894622081533814, length: 24
+MCTS finished:  [4, 3, 0, 2, 1] time:  6.740967273712158
+MCTS finished:  [2, 3, 0, 1, 4] time:  7.178479909896851
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.641067028045654
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.926397085189819
+MCTS finished:  [2, 0, 4, 1, 3] time:  7.591133117675781
+MCTS finished:  [0, 3, 1, 4, 2] time:  6.905394554138184
+order ORDER_0036 ends.
+Mean ratio: 0.5599144354301205, length: 18.594594594594593
+Episode ratio: 0.5485436793765259, length: 27
+MCTS finished:  [0, 4, 1, 2, 3] time:  6.976341724395752
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.363764047622681
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.80473780632019
+MCTS finished:  [2, 1, 0, 4, 3] time:  7.894065618515015
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.432558059692383
+MCTS finished:  [1, 0, 2, 3, 4] time:  9.83256220817566
+MCTS finished:  [3, 0, 4, 1, 2] time:  6.964596509933472
+order ORDER_0037 ends.
+Mean ratio: 0.5625314702227743, length: 18.92105263157895
+Episode ratio: 0.6593617575509645, length: 31
+MCTS finished:  [1, 0, 2, 3, 4] time:  6.855088472366333
+MCTS finished:  [4, 2, 0, 1, 3] time:  7.237183570861816
+MCTS finished:  [1, 0, 2, 4, 3] time:  7.720578670501709
+MCTS finished:  [2, 0, 1, 4, 3] time:  8.093759536743164
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.61369800567627
+MCTS finished:  [0, 2, 1, 3, 4] time:  9.34317135810852
+MCTS finished:  [4, 0, 1, 2, 3] time:  10.535677671432495
+MCTS finished:  [3, 0, 1, 2, 4] time:  10.600865364074707
+MCTS finished:  [0, 4, 1, 3, 2] time:  10.211599111557007
+order ORDER_0038 ends.
+Mean ratio: 0.5631168189836179, length: 19.512820512820515
+Episode ratio: 0.5853600718956758, length: 42
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.035966157913208
+MCTS finished:  [3, 0, 1, 4, 2] time:  7.139805316925049
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.34939980506897
+MCTS finished:  [3, 1, 0, 2, 4] time:  7.90991473197937
+MCTS finished:  [3, 1, 0, 2, 4] time:  8.107259511947632
+MCTS finished:  [0, 2, 1, 4, 3] time:  6.511587381362915
+order ORDER_0039 ends.
+Mean ratio: 0.5650596346488133, length: 19.7
+Episode ratio: 0.6408294455914306, length: 27
+MCTS finished:  [3, 0, 1, 2, 4] time:  6.962857723236084
+MCTS finished:  [3, 1, 0, 2, 4] time:  7.376847505569458
+MCTS finished:  [2, 0, 1, 3, 4] time:  8.02259874343872
+MCTS finished:  [4, 0, 1, 2, 3] time:  8.846781969070435
+MCTS finished:  [3, 0, 1, 2, 4] time:  9.2023024559021
+MCTS finished:  [0, 1, 2, 3, 4] time:  9.408319473266602
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.487711191177368
+order ORDER_0040 ends.
+Mean ratio: 0.5641566125107315, length: 19.951219512195124
+Episode ratio: 0.5280357269874574, length: 30
+MCTS finished:  [2, 4, 0, 3, 1] time:  6.945085763931274
+MCTS finished:  [1, 4, 0, 2, 3] time:  7.300459146499634
+MCTS finished:  [4, 0, 1, 2, 3] time:  7.957383394241333
+MCTS finished:  [1, 0, 2, 3, 4] time:  8.086309432983398
+MCTS finished:  [3, 0, 1, 4, 2] time:  7.626564264297485
+order ORDER_0041 ends.
+Mean ratio: 0.562996705054196, length: 20.0
+Episode ratio: 0.5154404993362427, length: 22
+MCTS finished:  [0, 2, 1, 3, 4] time:  6.9476158618927
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.217152833938599
+MCTS finished:  [2, 0, 3, 1, 4] time:  6.985322952270508
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.467180967330933
+MCTS finished:  [2, 0, 1, 3, 4] time:  6.907264471054077
+order ORDER_0042 ends.
+Mean ratio: 0.5649175155322922, length: 20.023255813953487
+Episode ratio: 0.645591555612335, length: 21
+MCTS finished:  [4, 1, 2, 3, 0] time:  6.895803451538086
+MCTS finished:  [0, 3, 2, 1, 4] time:  5.8893516063690186
+order ORDER_0043 ends.
+Mean ratio: 0.5629792523843749, length: 19.727272727272727
+Episode ratio: 0.47963393702392576, length: 7
+MCTS finished:  [2, 3, 0, 4, 1] time:  6.910676956176758
+MCTS finished:  [4, 3, 0, 2, 1] time:  7.226057767868042
+MCTS finished:  [2, 1, 4, 0, 3] time:  6.365458011627197
+MCTS finished:  [0, 4, 1, 2, 3] time:  6.942685604095459
+order ORDER_0044 ends.
+Mean ratio: 0.565295226519472, length: 19.666666666666668
+Episode ratio: 0.6671980884637451, length: 17
+MCTS finished:  [3, 4, 0, 2, 1] time:  6.8001978397369385
+MCTS finished:  [3, 1, 0, 4, 2] time:  6.886424779891968
+order ORDER_0045 ends.
+Mean ratio: 0.5654088416200936, length: 19.434782608695652
+Episode ratio: 0.5705215211480714, length: 9
+MCTS finished:  [0, 4, 1, 2, 3] time:  6.396521329879761
+order ORDER_0046 ends.
+Mean ratio: 0.5599900681655771, length: 19.06382978723404
+Episode ratio: 0.3107264892578125, length: 2
+MCTS finished:  [0, 3, 1, 2, 4] time:  6.639661550521851
+MCTS finished:  [2, 1, 0, 3, 4] time:  6.291937351226807
+order ORDER_0047 ends.
+Mean ratio: 0.5564216558822204, length: 18.770833333333332
+Episode ratio: 0.3887062785644531, length: 5
+MCTS finished:  [0, 2, 1, 3, 4] time:  6.8568642139434814
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.298046350479126
+MCTS finished:  [3, 4, 0, 1, 2] time:  7.064768552780151
+order ORDER_0048 ends.
+Mean ratio: 0.5560766550418014, length: 18.6734693877551
+Episode ratio: 0.5395166147016907, length: 14
+MCTS finished:  [2, 4, 3, 1, 0] time:  6.749027967453003
+MCTS finished:  [3, 0, 1, 2, 4] time:  6.95484185218811
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.373351097106934
+order ORDER_0049 ends.
+Mean ratio: 0.5579418465002915, length: 18.52
+Episode ratio: 0.6493362279663085, length: 11
+MCTS finished:  [3, 0, 1, 2, 4] time:  6.794607639312744
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.2204060554504395
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.563289642333984
+MCTS finished:  [1, 0, 2, 3, 4] time:  8.184296131134033
+MCTS finished:  [3, 2, 0, 1, 4] time:  9.174833297729492
+MCTS finished:  [0, 1, 2, 4, 3] time:  8.944620847702026
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.870974540710449
+MCTS finished:  [4, 0, 1, 3, 2] time:  7.472544431686401
+order ORDER_0050 ends.
+Mean ratio: 0.5596145652553559, length: 18.84313725490196
+Episode ratio: 0.6432505030085753, length: 35
+MCTS finished:  [0, 2, 1, 3, 4] time:  6.97232985496521
+MCTS finished:  [3, 0, 1, 4, 2] time:  7.262983322143555
+MCTS finished:  [4, 2, 0, 1, 3] time:  7.2210533618927
+MCTS finished:  [1, 0, 2, 4, 3] time:  7.866170644760132
+order ORDER_0051 ends.
+Mean ratio: 0.559621913910295, length: 18.846153846153847
+Episode ratio: 0.5599966953121949, length: 19
+MCTS finished:  [3, 0, 1, 2, 4] time:  6.577847957611084
+MCTS finished:  [1, 3, 0, 2, 4] time:  7.051381826400757
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.186366319656372
+order ORDER_0052 ends.
+Mean ratio: 0.5572281591317418, length: 18.71698113207547
+Episode ratio: 0.43275291064697263, length: 12
+MCTS finished:  [2, 0, 1, 4, 3] time:  6.9049224853515625
+MCTS finished:  [2, 4, 0, 1, 3] time:  7.3196117877960205
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.055469989776611
+MCTS finished:  [1, 0, 2, 3, 4] time:  8.502158403396606
+MCTS finished:  [1, 2, 0, 3, 4] time:  8.451744794845581
+MCTS finished:  [4, 0, 1, 2, 3] time:  6.752100467681885
+order ORDER_0053 ends.
+Mean ratio: 0.5582247960266523, length: 18.833333333333332
+Episode ratio: 0.6110465514569092, length: 25
+MCTS finished:  [3, 0, 1, 2, 4] time:  6.956530809402466
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.355794906616211
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.823125600814819
+MCTS finished:  [4, 0, 1, 2, 3] time:  8.357074737548828
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.598454475402832
+MCTS finished:  [4, 1, 0, 2, 3] time:  9.923678159713745
+MCTS finished:  [1, 2, 0, 4, 3] time:  9.011085748672485
+MCTS finished:  [1, 0, 2, 3, 4] time:  8.751297235488892
+MCTS finished:  [0, 1, 2, 4, 3] time:  6.582676410675049
+order ORDER_0054 ends.
+Mean ratio: 0.5599700893139662, length: 19.21818181818182
+Episode ratio: 0.6542159268289184, length: 40
+MCTS finished:  [2, 0, 1, 3, 4] time:  6.9421820640563965
+MCTS finished:  [4, 2, 0, 1, 3] time:  7.276132106781006
+MCTS finished:  [4, 2, 0, 1, 3] time:  7.993740797042847
+MCTS finished:  [1, 3, 0, 2, 4] time:  6.845168352127075
+order ORDER_0055 ends.
+Mean ratio: 0.5597924204924816, length: 19.196428571428573
+Episode ratio: 0.5500206353108216, length: 18
+MCTS finished:  [4, 2, 0, 1, 3] time:  6.764461994171143
+MCTS finished:  [2, 3, 0, 1, 4] time:  7.186399698257446
+MCTS finished:  [2, 0, 1, 3, 4] time:  6.828575611114502
+order ORDER_0056 ends.
+Mean ratio: 0.5558311210373554, length: 19.035087719298247
+Episode ratio: 0.333998351550293, length: 10
+MCTS finished:  [0, 4, 1, 3, 2] time:  6.6777050495147705
+MCTS finished:  [3, 1, 2, 4, 0] time:  5.831708192825317
+order ORDER_0057 ends.
+Mean ratio: 0.5580236489501257, length: 18.82758620689655
+Episode ratio: 0.6829977399780273, length: 7
+MCTS finished:  [1, 2, 0, 3, 4] time:  6.821465253829956
+MCTS finished:  [1, 0, 2, 4, 3] time:  7.358959436416626
+MCTS finished:  [3, 0, 1, 4, 2] time:  7.464466333389282
+MCTS finished:  [0, 1, 2, 3, 4] time:  5.887653350830078
+order ORDER_0058 ends.
+Mean ratio: 0.5602948429665039, length: 18.76271186440678
+Episode ratio: 0.6920240959164431, length: 15
+MCTS finished:  [1, 0, 2, 3, 4] time:  6.960768699645996
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.1545326709747314
+MCTS finished:  [2, 1, 0, 4, 3] time:  7.870450258255005
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.956449270248413
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.59456205368042
+order ORDER_0059 ends.
+Mean ratio: 0.5605276773701592, length: 18.833333333333332
+Episode ratio: 0.5742649071858216, length: 23
+MCTS finished:  [2, 0, 3, 1, 4] time:  6.674299955368042
+MCTS finished:  [3, 2, 0, 1, 4] time:  7.006232976913452
+MCTS finished:  [0, 1, 2, 4, 3] time:  5.152743816375732
+order ORDER_0060 ends.
+Mean ratio: 0.5607847394569785, length: 18.704918032786885
+Episode ratio: 0.5762084646661378, length: 11
+MCTS finished:  [3, 0, 1, 2, 4] time:  6.784459829330444
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.235823631286621
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.729059934616089
+MCTS finished:  [3, 1, 0, 4, 2] time:  8.365131855010986
+MCTS finished:  [1, 0, 2, 3, 4] time:  8.982371807098389
+MCTS finished:  [0, 1, 2, 4, 3] time:  9.12240743637085
+MCTS finished:  [0, 1, 2, 4, 3] time:  6.940640926361084
+order ORDER_0061 ends.
+Mean ratio: 0.5619538783333945, length: 18.887096774193548
+Episode ratio: 0.6332713497947693, length: 30
+MCTS finished:  [2, 4, 0, 1, 3] time:  6.885779857635498
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.013181686401367
+MCTS finished:  [4, 0, 1, 3, 2] time:  6.788904666900635
+order ORDER_0062 ends.
+Mean ratio: 0.5608564689054156, length: 18.761904761904763
+Episode ratio: 0.4928170843707275, length: 11
+MCTS finished:  [2, 1, 0, 3, 4] time:  6.875420570373535
+MCTS finished:  [3, 0, 1, 4, 2] time:  7.180398941040039
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.582698345184326
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.995553970336914
+MCTS finished:  [1, 0, 2, 4, 3] time:  8.625288009643555
+MCTS finished:  [4, 0, 1, 2, 3] time:  9.228003740310669
+order ORDER_0063 ends.
+Mean ratio: 0.561434996863519, length: 18.921875
+Episode ratio: 0.5978822582240295, length: 29
+MCTS finished:  [3, 0, 1, 2, 4] time:  6.775126218795776
+MCTS finished:  [1, 4, 0, 3, 2] time:  6.9963366985321045
+MCTS finished:  [0, 3, 1, 4, 2] time:  6.5303874015808105
+order ORDER_0064 ends.
+Mean ratio: 0.5623295878587002, length: 18.846153846153847
+Episode ratio: 0.619583411550293, length: 14
+MCTS finished:  [1, 4, 0, 2, 3] time:  6.663541078567505
+MCTS finished:  [0, 4, 3, 2, 1] time:  6.915485143661499
+MCTS finished:  [4, 1, 0, 3, 2] time:  7.225072383880615
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.782799959182739
+order ORDER_0065 ends.
+Mean ratio: 0.5634197632778574, length: 18.803030303030305
+Episode ratio: 0.6342811655230713, length: 16
+MCTS finished:  [3, 0, 1, 4, 2] time:  6.819806098937988
+MCTS finished:  [4, 3, 0, 2, 1] time:  7.189908981323242
+MCTS finished:  [1, 2, 0, 3, 4] time:  7.382910966873169
+order ORDER_0066 ends.
+Mean ratio: 0.5621855749416625, length: 18.73134328358209
+Episode ratio: 0.48072914475280765, length: 14
+MCTS finished:  [4, 2, 0, 3, 1] time:  6.7581446170806885
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.24185037612915
+MCTS finished:  [4, 0, 1, 2, 3] time:  7.484668493270874
+order ORDER_0067 ends.
+Mean ratio: 0.5622552322006598, length: 18.66176470588235
+Episode ratio: 0.5669222685534668, length: 14
+MCTS finished:  [3, 0, 1, 4, 2] time:  6.712069511413574
+MCTS finished:  [1, 0, 2, 3, 4] time:  6.830654859542847
+MCTS finished:  [2, 1, 0, 3, 4] time:  7.228489398956299
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.7055277824401855
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.580718755722046
+MCTS finished:  [0, 1, 2, 4, 3] time:  6.328738689422607
+order ORDER_0068 ends.
+Mean ratio: 0.5630951924625222, length: 18.753623188405797
+Episode ratio: 0.620212490269165, length: 25
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.956741809844971
+MCTS finished:  [0, 2, 1, 3, 4] time:  7.301244497299194
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.604010820388794
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.339479207992554
+order ORDER_0069 ends.
+Mean ratio: 0.5617655419719753, length: 18.7
+Episode ratio: 0.47001965812423707, length: 15
+MCTS finished:  [0, 2, 1, 3, 4] time:  6.972023963928223
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.297492027282715
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.455506324768066
+MCTS finished:  [2, 0, 4, 1, 3] time:  8.361290454864502
+order ORDER_0070 ends.
+Mean ratio: 0.5613322994427611, length: 18.690140845070424
+Episode ratio: 0.5310053223977662, length: 18
+MCTS finished:  [4, 0, 1, 3, 2] time:  6.9864325523376465
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.325204133987427
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.658069133758545
+MCTS finished:  [4, 1, 0, 2, 3] time:  8.498433113098145
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.158884763717651
+order ORDER_0071 ends.
+Mean ratio: 0.5602111721890545, length: 18.75
+Episode ratio: 0.48061113717590326, length: 23
+MCTS finished:  [2, 0, 1, 3, 4] time:  6.921847343444824
+MCTS finished:  [0, 2, 1, 3, 4] time:  7.160952091217041
+MCTS finished:  [0, 3, 1, 2, 4] time:  7.439721584320068
+order ORDER_0072 ends.
+Mean ratio: 0.5584298138055431, length: 18.684931506849313
+Episode ratio: 0.43017201019271845, length: 14
+MCTS finished:  [2, 3, 0, 1, 4] time:  6.7799341678619385
+order ORDER_0073 ends.
+Mean ratio: 0.5548222317698474, length: 18.486486486486488
+Episode ratio: 0.2914687431640625, length: 4
+MCTS finished:  [1, 2, 0, 3, 4] time:  6.981571912765503
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.2847208976745605
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.665938138961792
+MCTS finished:  [2, 1, 0, 3, 4] time:  8.34515118598938
+MCTS finished:  [0, 1, 2, 3, 4] time:  9.041332721710205
+MCTS finished:  [0, 1, 2, 3, 4] time:  10.259772539138794
+order ORDER_0074 ends.
+Mean ratio: 0.5547383384304027, length: 18.613333333333333
+Episode ratio: 0.5485302313114927, length: 28
+MCTS finished:  [0, 2, 1, 3, 4] time:  6.888095855712891
+MCTS finished:  [3, 0, 1, 4, 2] time:  7.24637508392334
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.608369588851929
+MCTS finished:  [1, 0, 2, 3, 4] time:  7.977003812789917
+MCTS finished:  [0, 3, 1, 4, 2] time:  8.964114904403687
+MCTS finished:  [0, 4, 1, 2, 3] time:  8.888344764709473
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.564085960388184
+order ORDER_0075 ends.
+Mean ratio: 0.555366394094151, length: 18.763157894736842
+Episode ratio: 0.6024705688752748, length: 30
+MCTS finished:  [3, 4, 0, 1, 2] time:  6.810855150222778
+MCTS finished:  [0, 2, 1, 4, 3] time:  5.89994740486145
+order ORDER_0076 ends.
+Mean ratio: 0.5553213057220786, length: 18.61038961038961
+Episode ratio: 0.55189458944458, length: 7
+MCTS finished:  [3, 2, 0, 1, 4] time:  6.924704074859619
+MCTS finished:  [3, 0, 1, 4, 2] time:  7.240150213241577
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.497138738632202
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.597325563430786
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.000471353530884
+order ORDER_0077 ends.
+Mean ratio: 0.5556586882141613, length: 18.666666666666668
+Episode ratio: 0.5816371401045226, length: 23
+MCTS finished:  [2, 0, 1, 3, 4] time:  6.981518507003784
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.0468480587005615
+MCTS finished:  [3, 2, 0, 1, 4] time:  7.428627252578735
+MCTS finished:  [2, 1, 0, 3, 4] time:  7.966579437255859
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.331542491912842
+MCTS finished:  [4, 0, 1, 3, 2] time:  7.399087429046631
+order ORDER_0078 ends.
+Mean ratio: 0.5569712700487692, length: 18.772151898734176
+Episode ratio: 0.6593526531481932, length: 27
+MCTS finished:  [1, 0, 2, 3, 4] time:  6.974758863449097
+MCTS finished:  [0, 3, 1, 2, 4] time:  7.3472020626068115
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.736560583114624
+MCTS finished:  [0, 1, 2, 4, 3] time:  8.058877229690552
+MCTS finished:  [0, 4, 1, 2, 3] time:  8.687136173248291
+MCTS finished:  [0, 1, 2, 4, 3] time:  6.293581247329712
+order ORDER_0079 ends.
+Mean ratio: 0.5580905533699235, length: 18.85
+Episode ratio: 0.6465139357411192, length: 25
+MCTS finished:  [1, 2, 0, 4, 3] time:  6.906289339065552
+MCTS finished:  [0, 4, 1, 2, 3] time:  7.1220104694366455
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.494394063949585
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.778832912445068
+MCTS finished:  [3, 0, 1, 4, 2] time:  8.576167345046997
+MCTS finished:  [1, 0, 2, 3, 4] time:  8.74814248085022
+MCTS finished:  [0, 2, 1, 4, 3] time:  6.432935476303101
+order ORDER_0080 ends.
+Mean ratio: 0.559130092168045, length: 19.0
+Episode ratio: 0.6422931960177614, length: 31
+MCTS finished:  [4, 0, 1, 2, 3] time:  6.952104330062866
+MCTS finished:  [3, 1, 0, 2, 4] time:  7.357694625854492
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.5939414501190186
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.14093279838562
+MCTS finished:  [2, 0, 1, 3, 4] time:  8.6954824924469
+MCTS finished:  [2, 0, 1, 4, 3] time:  9.273770093917847
+MCTS finished:  [4, 2, 0, 3, 1] time:  9.807539224624634
+order ORDER_0081 ends.
+Mean ratio: 0.5600167256745435, length: 19.170731707317074
+Episode ratio: 0.6318340397009279, length: 33
+MCTS finished:  [0, 3, 1, 4, 2] time:  6.8502113819122314
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.204238414764404
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.565646409988403
+MCTS finished:  [0, 2, 3, 1, 4] time:  6.636441707611084
+order ORDER_0082 ends.
+Mean ratio: 0.5587383449350609, length: 19.132530120481928
+Episode ratio: 0.4539111242974853, length: 16
+MCTS finished:  [4, 3, 0, 1, 2] time:  6.938355922698975
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.1947407722473145
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.69634222984314
+MCTS finished:  [0, 1, 2, 3, 4] time:  8.557077884674072
+MCTS finished:  [1, 0, 2, 3, 4] time:  8.649584770202637
+MCTS finished:  [4, 0, 1, 3, 2] time:  9.202905178070068
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.500541687011719
+order ORDER_0083 ends.
+Mean ratio: 0.559367291575301, length: 19.261904761904763
+Episode ratio: 0.6115698627152253, length: 30
+MCTS finished:  [1, 0, 2, 3, 4] time:  6.784455060958862
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.163453578948975
+MCTS finished:  [0, 3, 1, 4, 2] time:  5.767763137817383
+order ORDER_0084 ends.
+Mean ratio: 0.5573502911727779, length: 19.152941176470588
+Episode ratio: 0.38792225736083985, length: 10
+MCTS finished:  [2, 1, 0, 3, 4] time:  6.95518946647644
+MCTS finished:  [4, 1, 0, 2, 3] time:  7.224530458450317
+MCTS finished:  [1, 3, 0, 2, 4] time:  7.617841720581055
+MCTS finished:  [1, 0, 2, 4, 3] time:  8.165376663208008
+MCTS finished:  [2, 0, 1, 4, 3] time:  8.48152232170105
+MCTS finished:  [3, 1, 0, 4, 2] time:  9.089046955108643
+MCTS finished:  [4, 2, 0, 1, 3] time:  10.076202392578125
+MCTS finished:  [0, 1, 2, 4, 3] time:  9.95892596244812
+order ORDER_0085 ends.
+Mean ratio: 0.5582457358346042, length: 19.372093023255815
+Episode ratio: 0.6343585320898437, length: 38
+MCTS finished:  [3, 1, 0, 4, 2] time:  6.575127840042114
+MCTS finished:  [0, 2, 1, 4, 3] time:  6.882161378860474
+MCTS finished:  [3, 2, 0, 4, 1] time:  7.331018686294556
+MCTS finished:  [0, 1, 2, 3, 4] time:  5.172411918640137
+order ORDER_0086 ends.
+Mean ratio: 0.5586181150589007, length: 19.32183908045977
+Episode ratio: 0.5906427283483886, length: 15
+MCTS finished:  [0, 2, 1, 3, 4] time:  6.973131895065308
+MCTS finished:  [3, 0, 1, 4, 2] time:  7.3906028270721436
+MCTS finished:  [2, 0, 1, 3, 4] time:  7.986091375350952
+MCTS finished:  [2, 1, 0, 4, 3] time:  8.275673389434814
+MCTS finished:  [2, 0, 1, 3, 4] time:  9.227080583572388
+MCTS finished:  [4, 0, 1, 3, 2] time:  9.8602454662323
+order ORDER_0087 ends.
+Mean ratio: 0.5584114081599149, length: 19.431818181818183
+Episode ratio: 0.5404279079481507, length: 29
+MCTS finished:  [3, 1, 0, 4, 2] time:  6.941519260406494
+MCTS finished:  [4, 0, 1, 2, 3] time:  7.3650288581848145
+MCTS finished:  [3, 1, 0, 2, 4] time:  7.838421821594238
+MCTS finished:  [4, 0, 1, 2, 3] time:  8.102677345275879
+MCTS finished:  [4, 0, 1, 2, 3] time:  9.580571413040161
+MCTS finished:  [0, 1, 2, 4, 3] time:  10.666234970092773
+MCTS finished:  [0, 3, 1, 4, 2] time:  7.371497392654419
+order ORDER_0088 ends.
+Mean ratio: 0.5589912171889916, length: 19.55056179775281
+Episode ratio: 0.6100144117477416, length: 30
+MCTS finished:  [0, 4, 1, 2, 3] time:  6.85959267616272
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.161620855331421
+MCTS finished:  [3, 4, 0, 2, 1] time:  6.799723148345947
+order ORDER_0089 ends.
+Mean ratio: 0.5578191284089593, length: 19.488888888888887
+Episode ratio: 0.45350322698608403, length: 14
+MCTS finished:  [1, 2, 0, 4, 3] time:  6.646804571151733
+order ORDER_0090 ends.
+Mean ratio: 0.5541588613916653, length: 19.318681318681318
+Episode ratio: 0.22473482983520507, length: 4
+MCTS finished:  [2, 0, 1, 3, 4] time:  6.700375556945801
+MCTS finished:  [1, 0, 2, 4, 3] time:  6.986126899719238
+MCTS finished:  [0, 1, 2, 3, 4] time:  5.786292314529419
+order ORDER_0091 ends.
+Mean ratio: 0.5535274150535484, length: 19.217391304347824
+Episode ratio: 0.4960657982849122, length: 10
+MCTS finished:  [4, 2, 0, 1, 3] time:  6.950096845626831
+MCTS finished:  [3, 0, 1, 2, 4] time:  7.330526351928711
+MCTS finished:  [0, 1, 2, 3, 4] time:  7.4622063636779785
+order ORDER_0092 ends.
+Mean ratio: 0.5511628584363154, length: 19.129032258064516
+Episode ratio: 0.33362364965087893, length: 11
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.887125492095947
+MCTS finished:  [0, 3, 1, 4, 2] time:  6.967129945755005
+MCTS finished:  [3, 0, 1, 4, 2] time:  7.705618619918823
+MCTS finished:  [1, 0, 2, 4, 3] time:  7.075970411300659
+order ORDER_0093 ends.
+Mean ratio: 0.5506868840966245, length: 19.106382978723403
+Episode ratio: 0.5064212705053711, length: 17
+MCTS finished:  [2, 3, 0, 4, 1] time:  7.028676748275757
+MCTS finished:  [1, 4, 0, 3, 2] time:  7.252765655517578
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.245197534561157
+order ORDER_0094 ends.
+Mean ratio: 0.5494390140970106, length: 19.010526315789473
+Episode ratio: 0.4321392341333008, length: 10
+MCTS finished:  [1, 0, 2, 3, 4] time:  6.789411544799805
+MCTS finished:  [0, 3, 4, 1, 2] time:  7.326384782791138
+MCTS finished:  [4, 3, 0, 1, 2] time:  6.990407466888428
+MCTS finished:  [0, 1, 2, 3, 4] time:  5.925627708435059
+order ORDER_0095 ends.
+Mean ratio: 0.5501606369505183, length: 18.96875
+Episode ratio: 0.6187148080337525, length: 15
+MCTS finished:  [3, 1, 0, 4, 2] time:  6.857646703720093
+MCTS finished:  [0, 2, 1, 3, 4] time:  7.291380405426025
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.635957479476929
+MCTS finished:  [0, 2, 1, 3, 4] time:  7.591878652572632
+order ORDER_0096 ends.
+Mean ratio: 0.5506795462573966, length: 18.95876288659794
+Episode ratio: 0.6004948397177124, length: 18
+MCTS finished:  [1, 2, 0, 4, 3] time:  6.913404703140259
+MCTS finished:  [0, 1, 2, 4, 3] time:  7.224273920059204
+MCTS finished:  [4, 0, 1, 3, 2] time:  7.555001497268677
+order ORDER_0097 ends.
+Mean ratio: 0.5499972710391298, length: 18.908163265306122
+Episode ratio: 0.48381657486724855, length: 14
+MCTS finished:  [1, 0, 2, 3, 4] time:  6.86477518081665
+MCTS finished:  [4, 3, 1, 2, 0] time:  6.61184287071228
+MCTS finished:  [0, 1, 2, 3, 4] time:  6.595670938491821
+order ORDER_0098 ends.
+Mean ratio: 0.5498897156193064, length: 18.828282828282827
+Episode ratio: 0.5393492844766236, length: 11
+MCTS finished:  [4, 0, 1, 2, 3] time:  6.868147611618042
+MCTS finished:  [1, 2, 0, 3, 4] time:  7.1158483028411865
+MCTS finished:  [1, 2, 0, 3, 4] time:  7.147632122039795
+order ORDER_0099 ends.
+Mean ratio: 0.5501071091578339, length: 18.78
+Episode ratio: 0.5716290694720458, length: 14
+Evaluation using 100 episodes
+Mean ratio 0.55011, mean length18.78000
+

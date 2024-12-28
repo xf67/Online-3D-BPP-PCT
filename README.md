@@ -7,10 +7,11 @@ I use the code from [Online-3D-BPP-PCT](https://github.com/alexfrom0815/Online-3
 - Small bugs fixed of the original code
 - Add a new data generation method to create continuous data by cutting for training
 - Add another new data generator to read data from csv file for evaluation
-- Add some new features in PctContinuous0 environment, e.g. preview, rearrange
+- Add some new features in PctContinuous0 environment, e.g. preview, rearrange to suit the MCTS method
 - Add MCTS method in evaluation to enable the policy to change the order of boxes
 - Add a bash script to run training for a list of containers
-- Add code to select the best container for a given box list
+- Add method to select the best container for a given container list, and add code to evaluate the policy with container selection
+- Add code to draw the statistic of different types of evaluation results
 
 ### How to run
 
@@ -140,6 +141,9 @@ The mean space ratio is 0.43292918640132133, the ratio threshold is0.64400350003
 This is the first 100 updates of training.
 
 #### Evaluation output:
+
+I recently made a small revision of the evaluation code, and it will output the current episode's order name instead of the episode number, if you use the csv format dataset and provide the `sku_code`.
+So the output will be a little different from below.
 
 ```
 Episode 0 ends.
