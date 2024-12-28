@@ -54,6 +54,12 @@ python evaluation.py --evaluate --continuous --setting 2 --container-size "[100,
 You can provide dataset in the `.pt` format or `.csv` format. 
 I have revised the original code to support both formats.
 
+```bash
+python draw/eval_one_bin_statistic.py
+```
+
+This is the related code to draw the statistic of the evaluation results. You may change the log path in the script to fit your needs.
+
 #### Test with MTCS:
 
 ```bash
@@ -67,9 +73,24 @@ The default setting is that the model can preview 3 boxes and do 10 simulations,
 #### Test with multiple containers:
 
 ```bash
-bash multi_box_eval.py
+python multi_box_eval.py  --evaluate --continuous --load-model --model-path logs/experiment/setting2_discrete.pt --load-dataset --dataset-path dataset/task3.csv
 ```
 You may need to modify the `container_sizes` and `model_paths` in the script to fit your needs.
+And you can redirect the output to a file to save it and then draw the statistic.
+
+```bash
+python draw/eval_multi_bin_statistic.py
+```
+
+This is the related code to draw the statistic of the evaluation results. You may change the log path in the script to fit your needs.
+
+#### Generate the theoretical max utilization:
+
+```bash
+python draw/get_theo_max.py
+```
+
+This code will generate the theoretical max utilization and the container type distribution, then output a pic to show the result.
 
 ### Sample outputs
 

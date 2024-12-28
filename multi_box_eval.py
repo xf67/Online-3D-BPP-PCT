@@ -10,7 +10,7 @@ from pct_envs.PctContinuous0.binCreator import CSVBoxCreator
 import copy
 import tools
 
-# python '/home/xiaxinfeng/HW/ML/Online-3D-BPP-PCT/multi_box_eval.py' --evaluate --continuous --load-model --model-path /home/xiaxinfeng/HW/ML/Online-3D-BPP-PCT/logs/experiment/setting2_discrete.pt --load-dataset --dataset-path /home/xiaxinfeng/HW/ML/Online-3D-BPP-PCT/dataset/task3.csv
+
 # argss从get_args里获取，为第一个container的eval设定
 
 class MultiContainerPacker:
